@@ -21,24 +21,24 @@ android {
     compileSdkVersion rootProject.compileSdk
 
     defaultConfig {
+        namespace  "com.google.samples.apps.topeka.base"
         minSdkVersion rootProject.minSdk
         targetSdkVersion rootProject.targetSdk
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
-
-    buildTypes {
-        release {
-            signingConfig signingConfigs.debug
-        }
+    compileOptions {
+        sourceCompatibility = '17'
+        targetCompatibility = '17'
     }
+    
 
 }
 
 dependencies {
-
-    api 'androidx.appcompat:appcompat:1.1.0'
-    api 'com.google.android.material:material:1.1.0'
+    api 'androidx.multidex:multidex:2.0.1'
+    api 'androidx.appcompat:appcompat:1.6.1'
+    api 'com.google.android.material:material:1.10.0'
     api 'androidx.legacy:legacy-support-v4:1.0.0'
     api 'com.google.android.instantapps:instantapps:1.1.0'
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
